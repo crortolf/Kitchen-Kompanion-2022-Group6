@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">KitchenKompanion</string>
+    <string name="add_a_new_shopping_list_item">Add a new shopping list item</string>
 </resources>
