@@ -3,10 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Ethan/Desktop/Spring 2022/cmsc434/Kitchen-Kompanion-2022-Group6/app/src/main/res/drawable/gradient_background.xml" value="0.1825" />
+        <entry key="..\:/Users/Ethan/Desktop/Spring 2022/cmsc434/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/activity_main.xml" value="0.3338541666666667" />
+        <entry key="..\:/Users/Ethan/Desktop/Spring 2022/cmsc434/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/activity_shopping_list.xml" value="0.3338541666666667" />
+        <entry key="..\:/Users/Ethan/Desktop/Spring 2022/cmsc434/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/background_gradient.xml" value="0.3338541666666667" />
+        <entry key="..\:/Users/Ethan/Desktop/Spring 2022/cmsc434/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/recipe_list.xml" value="0.3338541666666667" />
+        <entry key="..\:/Users/Ethan/Desktop/cmsc434/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/activity_main.xml" value="0.3338541666666667" />
         <entry key="..\:/Users/crort/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/activity_main.xml" value="0.35260416666666666" />
-        <entry key="..\:/Users/slam2/OneDrive/Documents/College/Senior Year 2nd Sem/CMSC434/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/activity_main.xml" value="0.35688405797101447" />
-        <entry key="..\:/Users/slam2/OneDrive/Documents/College/Senior Year 2nd Sem/CMSC434/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/activity_shopping_list.xml" value="0.33" />
-        <entry key="..\:/Users/slam2/OneDrive/Documents/College/Senior Year 2nd Sem/CMSC434/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/shoppingitempopup.xml" value="0.35688405797101447" />
       </map>
     </option>
   </component>
