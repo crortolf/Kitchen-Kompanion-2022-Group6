@@ -20,14 +20,35 @@
 
     <TextView
         android:id="@+id/topBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Default"
+        android:layout_width="199dp"
+        android:layout_height="161dp"
+        android:fontFamily="@font/default_fonts"
+        android:text="This is a test to see if the fonts work"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.155" />
+
+    <Button
+        android:id="@+id/recipeListButton"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:fontFamily="@font/default_fonts"
+        android:text="Recipes"
+        android:textAllCaps="false"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="382dp" />
+
+    <Button
+        android:id="@+id/kitchenButton"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:fontFamily="@font/default_fonts"
+        android:text="Kitchen Overview"
+        android:textAllCaps="false"
+        tools:layout_editor_absoluteX="246dp"
+        tools:layout_editor_absoluteY="382dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
