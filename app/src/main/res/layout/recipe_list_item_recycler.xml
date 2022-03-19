@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- default color for the app is #6200EE -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/text"
+    android:textColor="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:gravity="center"
+    android:padding="16dp"
+    android:textSize="20sp"
+    android:background="@drawable/rounded_button"
+    android:textAppearance="@android:style/TextAppearance.Material.Display1" />
