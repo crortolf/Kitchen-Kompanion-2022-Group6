@@ -1,7 +1,7 @@
 package com.example.kitchenkompanion;
 
 public class GroceryItem {
-    public String name, units;
+    public String name, units, expirationDate;
     public float amount, minimumAmount;
 
     public GroceryItem(String name, String units, float amount) {
@@ -27,5 +27,9 @@ public class GroceryItem {
         String amountS;
         amountS = (amount % 1.0 == 0.0) ? String.valueOf((int) amount) : String.valueOf(amount);
         return amountS + units;
+    }
+
+    public void setExpirationDate(String date) {
+        expirationDate = date;
     }
 }
