@@ -2,7 +2,7 @@ package com.example.kitchenkompanion;
 
 public class GroceryItem {
     public String name, units;
-    public float amount, minimumAmount;
+    public float amount, minimumAmount, maximumAmount;
 
     public GroceryItem(String name, String units, float amount) {
         this.name = name;
@@ -29,3 +29,4 @@ public class GroceryItem {
         return amountS + units;
     }
 }
+
