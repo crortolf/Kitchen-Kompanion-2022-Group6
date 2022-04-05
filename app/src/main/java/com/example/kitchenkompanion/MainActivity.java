@@ -1,10 +1,18 @@
 package com.example.kitchenkompanion;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContract;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -12,6 +20,18 @@ import android.widget.LinearLayout;
 public class MainActivity extends AppCompatActivity {
     float scale;
     Button currentUser = null;
+
+    ActivityResultLauncher<Intent> myActivityResultLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult result) {
+                    if (result.getResultCode() == Activity.RESULT_OK) {
+                        Intent data = result.getData();
+                        newPage(data.getExtras().getInt("nextPage"));
+                    }
+                }
+            });
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,26 +80,65 @@ public class MainActivity extends AppCompatActivity {
         Button recipe = findViewById(R.id.recipesButton);
         Button kitchen = findViewById(R.id.kitchenOverview);
         Button shopping = findViewById(R.id.shoppingButton);
+        Button main = findViewById(R.id.homeButton);
+
+        //page codes: 0 is main, 1 is shopping, 2 is pantry, 3 is recipes
 
         View.OnClickListener recipePage = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.recycle_list);
+                newPage(3);
+            }
+        };
+
+        View.OnClickListener pantryPage = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                newPage(2);
             }
         };
 
         View.OnClickListener shoppingPage = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.activity_shopping_list);
+                newPage(1);
             }
         };
 
+        /* Not needed when already on homepage
+        View.OnClickListener homePage = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        };*/
+
+        kitchen.setOnClickListener(pantryPage);
+        //main.setOnClickListener(homePage);
         recipe.setOnClickListener(recipePage);
         shopping.setOnClickListener(shoppingPage);
     }
 
     private int toPix(int dps) {
         return (int) (dps * scale + 0.5f);
+    }
+
+    //page codes: 0 is main, 1 is shopping, 2 is pantry, 3 is recipes
+    private boolean newPage(int pageCode) {
+        Intent intent = null;
+        switch(pageCode) {
+            case 3: intent = new Intent(this, RecipeList.class);
+                break;
+            case 2: intent = new Intent(this, UserItemList.class);
+                break;
+            case 1: intent = new Intent(this, ShoppingList.class);
+                break;
+            case 0: return true;
+            default: return false;
+        }
+        intent.putExtra("nextPage", -1);
+        myActivityResultLauncher.launch(intent);
+
+        return false;
     }
 }

@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KitchenKompanion.NoActionBar" >
         <activity
+            android:name=".RecipeList"
+            android:exported="true" />
+        <activity
+            android:name=".UserItemList"
+            android:exported="true" />
+        <activity
             android:name=".ShoppingList"
             android:exported="true" />
         <activity
