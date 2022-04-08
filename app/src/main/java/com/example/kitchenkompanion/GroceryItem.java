@@ -2,12 +2,14 @@ package com.example.kitchenkompanion;
 
 public class GroceryItem {
     public String name, units;
+    private boolean status;
     public float amount, minimumAmount;
 
     public GroceryItem(String name, String units, float amount) {
         this.name = name;
         this.units = units;
         this.amount = amount;
+        this.status = false;
         minimumAmount = 0;
     }
 
@@ -27,5 +29,13 @@ public class GroceryItem {
         String amountS;
         amountS = (amount % 1.0 == 0.0) ? String.valueOf((int) amount) : String.valueOf(amount);
         return amountS + units;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public boolean getStatus() {
+        return status;
     }
 }

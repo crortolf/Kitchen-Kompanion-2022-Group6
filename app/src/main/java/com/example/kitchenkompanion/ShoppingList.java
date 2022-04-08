@@ -2,14 +2,18 @@ package com.example.kitchenkompanion;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ShoppingList extends AppCompatActivity {
@@ -19,12 +23,32 @@ public class ShoppingList extends AppCompatActivity {
     private EditText newItemPopup;
     private Button popupCancel, popupSave;
 
-    private List<String> shoppingList;
+    private List<GroceryItem> shoppingList;
+    private RecyclerView shoppingListRecyclerView;
+    private ShoppingListAdapter shoppingListAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopping_list);
+        getSupportActionBar().hide();
+
+        shoppingList = new ArrayList<>();
+
+        shoppingListRecyclerView = findViewById(R.id.shoppingListRecyclerView);
+        shoppingListRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        shoppingListAdapter = new ShoppingListAdapter(this);
+        shoppingListRecyclerView.setAdapter(shoppingListAdapter);
+
+        shoppingList.add(new GroceryItem("Apple", "Yes", 0));
+        shoppingList.add(new GroceryItem("Banana", "Yes", 0));
+        shoppingList.add(new GroceryItem("Cantaloupe", "Yes", 0));
+        shoppingList.add(new GroceryItem("Donut", "Yes", 0));
+
+        shoppingListAdapter.setGroceryItem(shoppingList);
+
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(new RecyclerItemTouchHelper(shoppingListAdapter));
+        itemTouchHelper.attachToRecyclerView(shoppingListRecyclerView);
 
         FloatingActionButton fab = findViewById(R.id.floatingActionButton);
         fab.setOnClickListener(new View.OnClickListener() {
