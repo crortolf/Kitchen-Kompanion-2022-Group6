@@ -17,7 +17,7 @@ public class RecyclerItemTouchHelper extends ItemTouchHelper.SimpleCallback {
     private ShoppingListAdapter adapter;
 
     public RecyclerItemTouchHelper(ShoppingListAdapter adapter) {
-        super(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT);
+        super(0, ItemTouchHelper.LEFT); // ItemTouchHelper.RIGHT for edit
         this.adapter = adapter;
     }
 
@@ -51,6 +51,7 @@ public class RecyclerItemTouchHelper extends ItemTouchHelper.SimpleCallback {
         }
         else {
             // edit grocery item
+
         }
     }
 

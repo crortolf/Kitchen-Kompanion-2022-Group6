@@ -34,8 +34,7 @@ public class GroceryItem {
     public String getName() {
         return name;
     }
-
-    public boolean getStatus() {
-        return status;
-    }
+    public String getUnits() { return units; }
+    public float getAmount() { return amount; }
+    public boolean getStatus() { return status; }
 }

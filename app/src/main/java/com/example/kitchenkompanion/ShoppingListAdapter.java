@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -28,6 +29,7 @@ public class ShoppingListAdapter extends RecyclerView.Adapter<ShoppingListAdapte
         GroceryItem item = groceryList.get(position);
         holder.shoppingListItem.setText(item.getName());
         holder.shoppingListItem.setChecked(item.getStatus());
+        holder.shoppingListQuantity.setText(item.getAmount() + " " + item.getUnits());
     }
 
     public int getItemCount() {
@@ -50,10 +52,12 @@ public class ShoppingListAdapter extends RecyclerView.Adapter<ShoppingListAdapte
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         CheckBox shoppingListItem;
+        TextView shoppingListQuantity;
 
         ViewHolder(View view) {
             super(view);
             shoppingListItem = view.findViewById(R.id.shoppingListCheckBox);
+            shoppingListQuantity = view.findViewById(R.id.shoppingListQuantity);
         }
     }
 }

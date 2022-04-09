@@ -40,10 +40,10 @@ public class ShoppingList extends AppCompatActivity {
         shoppingListAdapter = new ShoppingListAdapter(this);
         shoppingListRecyclerView.setAdapter(shoppingListAdapter);
 
-        shoppingList.add(new GroceryItem("Apple", "Yes", 0));
-        shoppingList.add(new GroceryItem("Banana", "Yes", 0));
-        shoppingList.add(new GroceryItem("Cantaloupe", "Yes", 0));
-        shoppingList.add(new GroceryItem("Donut", "Yes", 0));
+        shoppingList.add(new GroceryItem("Milk", "Cartons", 0.5f));
+        shoppingList.add(new GroceryItem("Apples", "Apples", 4));
+        shoppingList.add(new GroceryItem("Flour", "lbs", 3.5f));
+        shoppingList.add(new GroceryItem("Ramen", "Cups", 16));
 
         shoppingListAdapter.setGroceryItem(shoppingList);
 
