@@ -75,7 +75,8 @@ public class ShoppingList extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // save button
-                //shoppingList.add(newItemPopup.getText().toString());
+                shoppingList.add(new GroceryItem("Filler", "Units", 1f));
+                shoppingListAdapter.setGroceryItem(shoppingList);
                 dialog.dismiss();
             }
         });
