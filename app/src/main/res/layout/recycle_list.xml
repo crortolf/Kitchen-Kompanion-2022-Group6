@@ -17,10 +17,10 @@
         android:textColor="#0C600F"
         android:textSize="34sp" />
 
-    <androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="520dp"
         android:layout_marginTop="100dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
