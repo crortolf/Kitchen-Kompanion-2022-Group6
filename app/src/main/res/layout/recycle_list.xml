@@ -13,11 +13,12 @@
         android:layout_height="match_parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/addrecipebutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="650dp"
         android:layout_marginStart="32dp"
+        android:backgroundTint="#997017"
         android:clickable="true"
         android:contentDescription="@string/add_a_new_shopping_list_item"
         android:focusable="true"
