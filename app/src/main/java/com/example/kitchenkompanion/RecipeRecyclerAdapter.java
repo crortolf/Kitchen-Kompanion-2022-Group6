@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class RecipeRecyclerAdapter extends RecyclerView.Adapter<RecipeRecyclerAdapter.ViewHolder>{
-    private String[] recipeNames;
+    private ArrayList<String> recipeNames;
 
     // define what each of the views I'm using are going to look like
     // it's just a text view with the name of the recipe
@@ -28,7 +28,12 @@ public class RecipeRecyclerAdapter extends RecyclerView.Adapter<RecipeRecyclerAd
         }
     }
 
-    public RecipeRecyclerAdapter(String[] dataSet) {
+    public void addItem(String name) {
+        recipeNames.add(name);
+        notifyDataSetChanged();
+    }
+
+    public RecipeRecyclerAdapter(ArrayList<String> dataSet) {
         recipeNames = dataSet;
     }
 
@@ -44,11 +49,12 @@ public class RecipeRecyclerAdapter extends RecyclerView.Adapter<RecipeRecyclerAd
 
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
-        viewHolder.getRecipeName().setText(recipeNames[position]);
+        viewHolder.getRecipeName().setText(recipeNames.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return recipeNames.length;
+        return recipeNames.size();
     }
+
 }
