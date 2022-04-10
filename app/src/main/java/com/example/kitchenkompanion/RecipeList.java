@@ -1,6 +1,8 @@
 package com.example.kitchenkompanion;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -23,5 +25,6 @@ public class RecipeList  extends AppCompatActivity {
         String[] recipeNames = {"Grandma's Chili"};
 
         mRecyclerView.setAdapter(new RecipeRecyclerAdapter(recipeNames));
+
     }
 }
