@@ -66,9 +66,9 @@
         android:id="@+id/addrecipebtn"
         android:layout_width="300dp"
         android:layout_height="55dp"
-        android:layout_marginTop="650dp"
-        android:layout_marginHorizontal="300dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="300dp"
+        android:layout_marginTop="570dp"
         android:backgroundTint="#997017"
         android:gravity="center"
         android:text="Create Recipe" />
@@ -96,11 +96,10 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recipe_item_recycler"
         android:layout_width="match_parent"
-        android:layout_height="310dp"
-        android:layout_marginTop="300dp"
+        android:layout_height="240dp"
         android:layout_marginLeft="12dp"
+        android:layout_marginTop="300dp"
         android:layout_marginRight="12dp"
-        android:background="@drawable/rectangle_border"
-        />
+        android:background="@drawable/rectangle_border" />
 
 </RelativeLayout>

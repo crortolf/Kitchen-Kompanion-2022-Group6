@@ -13,6 +13,16 @@
             android:name=".RecipeList"
             android:exported="true" />
         <activity
+            android:name=".AddRecipeActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.ADDRECIPE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".UserItemList"
             android:exported="true" />
         <activity

@@ -7,26 +7,31 @@
     app:cardCornerRadius="8dp"
     android:layout_marginHorizontal="16dp"
     android:layout_marginVertical="8dp">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/brown"
         android:padding="8dp">
 
         <CheckBox
             android:id="@+id/shoppingListCheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:buttonTint="#FFFFFF"
+            android:paddingStart="8dp"
             android:text="This is a sample grocery item."
-            android:paddingStart="8dp" />
+            android:textColor="@color/white" />
 
         <TextView
             android:id="@+id/shoppingListQuantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="1dp"
             android:layout_centerInParent="true"
-            android:text="Testing" />
+            android:layout_marginEnd="1dp"
+            android:text="Testing"
+            android:textColor="#D8D8D8" />
 
     </RelativeLayout>
 

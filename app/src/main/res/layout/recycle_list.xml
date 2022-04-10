@@ -27,10 +27,10 @@
         android:id="@+id/addrecipebutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:layout_marginLeft="310dp"
+        android:layout_marginTop="32dp"
         android:layout_marginBottom="32dp"
-        android:backgroundTint="#997017"
+        android:backgroundTint="@color/green"
         android:clickable="true"
         android:contentDescription="@string/add_a_new_shopping_list_item"
         android:focusable="true"
@@ -42,10 +42,7 @@
         android:id="@+id/buttonsFrame"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_alignParentBottom="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_alignParentBottom="true"
-        tools:layout_editor_absoluteX="0dp">
+        android:layout_alignParentBottom="true">
 
         <LinearLayout
             android:id="@+id/pageBar"
