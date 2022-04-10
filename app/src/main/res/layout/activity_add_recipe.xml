@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="Add Recipe"
+        android:textColor="#0C600F"
+        android:textSize="28sp" />
+
+    <EditText
+        android:id="@+id/newrecipe"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_weight="1"
+        android:backgroundTint="@android:color/background_dark"
+        android:foregroundGravity="center_horizontal"
+        android:gravity="left"
+        android:hint="Recipe Name"
+        android:inputType="text"
+        android:textColor="#0C600F"
+        android:textColorHint="#0C600F" />
+
+    <EditText   android:layout_weight="1"
+        android:gravity="left"
+        android:id="@+id/newitem"
+        android:layout_marginTop="140dp"
+        android:layout_marginLeft="12dp"
+        android:layout_width="280dp"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_height="55dp"
+        android:inputType="text"
+        android:backgroundTint="@android:color/background_dark"
+        android:textColor="#0C600F"
+        android:hint="New Item"
+        android:textColorHint="#0C600F"/>
+
+    <EditText   android:layout_weight="1"
+        android:gravity="left"
+        android:id="@+id/newinstruction"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="200dp"
+        android:layout_width="280dp"
+        android:foregroundGravity="center_horizontal"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_height="55dp"
+        android:inputType="text"
+        android:backgroundTint="@android:color/background_dark"
+        android:textColor="#0C600F"
+        android:hint="New Instruction"
+        android:textColorHint="#0C600F"/>
+
+
+    <Button
+        android:id="@+id/addrecipebtn"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="650dp"
+        android:layout_marginHorizontal="300dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#997017"
+        android:gravity="center"
+        android:text="Create Recipe" />
+
+    <Button
+        android:id="@+id/additembtn"
+        android:layout_width="80dp"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="290dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginRight="12dp"
+        android:backgroundTint="#997017"
+        android:text="Add" />
+
+    <Button
+        android:id="@+id/addinstructionbtn"
+        android:layout_width="80dp"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="290dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="200dp"
+        android:backgroundTint="#997017"
+        android:text="Add" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recipe_item_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/rectangle_border"
+        />
+
+</RelativeLayout>
