@@ -1,12 +1,17 @@
 package com.example.kitchenkompanion;
 
 import android.content.Intent;
+import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -17,10 +22,13 @@ public class UserItemList extends AppCompatActivity {
     ArrayList<String> items;
     ArrayAdapter<String> adapter;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_item_list);
+
+        Typeface mt = getResources().getFont(R.font.helvetica);
 
         listView = findViewById(R.id.listview);
         items = new ArrayList<>();
@@ -29,7 +37,15 @@ public class UserItemList extends AppCompatActivity {
         items.add("Orange");
         items.add("Watermelon");
 
-        adapter = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, items);
+        adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, items) {
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                View view = super.getView(position, convertView, parent);
+                TextView text = (TextView) view.findViewById(android.R.id.text1);
+                text.setTypeface(mt);
+                return view;
+            }
+        };
         listView.setAdapter(adapter);
 
         Button recipe = findViewById(R.id.recipesButton);

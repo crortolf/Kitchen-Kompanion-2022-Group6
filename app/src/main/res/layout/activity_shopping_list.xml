@@ -134,13 +134,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:fontFamily="@font/playfair"
         android:text="Shopping List"
+        android:textColor="@color/green"
         android:textSize="34sp"
         app:layout_constraintEnd_toStartOf="@+id/floatingActionButton"
         app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.525" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/shoppingListRecyclerView"
@@ -161,7 +162,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="10dp"
+        android:fontFamily="@font/helvetica"
         android:text="Finished Shopping"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@id/buttonsFrame"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

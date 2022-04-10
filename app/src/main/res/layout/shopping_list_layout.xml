@@ -19,6 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
+            android:fontFamily="@font/helvetica"
             android:paddingStart="8dp"
             android:text="This is a sample grocery item."
             android:textColor="@color/white" />
@@ -30,6 +31,7 @@
             android:layout_alignParentEnd="true"
             android:layout_centerInParent="true"
             android:layout_marginEnd="1dp"
+            android:fontFamily="@font/helvetica"
             android:text="Testing"
             android:textColor="#D8D8D8" />
 

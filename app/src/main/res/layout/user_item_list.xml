@@ -125,7 +125,9 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
+            android:fontFamily="@font/playfair_display_bold"
             android:text="My Items"
+            android:textColor="@color/green"
             android:textSize="40dp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -147,6 +149,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/buttonsFrame"
-        android:layout_below="@+id/header" />
+        android:layout_below="@+id/header"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="-2dp" />
 
 </RelativeLayout>
