@@ -1,13 +1,15 @@
 package com.example.kitchenkompanion;
 
 public class GroceryItem {
-    public String name, units, expirationDate;
+    public String name, units;
+    private boolean status;
     public float amount, minimumAmount;
 
     public GroceryItem(String name, String units, float amount) {
         this.name = name;
         this.units = units;
         this.amount = amount;
+        this.status = false;
         minimumAmount = 0;
     }
 
@@ -29,7 +31,10 @@ public class GroceryItem {
         return amountS + units;
     }
 
-    public void setExpirationDate(String date) {
-        expirationDate = date;
+    public String getName() {
+        return name;
     }
+    public String getUnits() { return units; }
+    public float getAmount() { return amount; }
+    public boolean getStatus() { return status; }
 }
