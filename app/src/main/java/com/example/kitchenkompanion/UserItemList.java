@@ -28,7 +28,7 @@ public class UserItemList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_item_list);
 
-        Typeface mt = getResources().getFont(R.font.helvetica);
+        Typeface mt = getResources().getFont(R.font.helvetica_neue);
 
         listView = findViewById(R.id.listview);
         items = new ArrayList<>();
