@@ -31,7 +31,6 @@ public class ShoppingList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopping_list);
-        getSupportActionBar().hide();
 
         shoppingList = new ArrayList<>();
 
@@ -57,6 +56,54 @@ public class ShoppingList extends AppCompatActivity {
                 createNewItemDialog();
             }
         });
+
+        Button kitchen = findViewById(R.id.kitchenOverview);
+        Button main = findViewById(R.id.homeButton);
+        Button recipe = findViewById(R.id.recipesButton);
+
+        //page codes: 0 is main, 1 is shopping, 2 is pantry, 3 is recipes
+        View.OnClickListener recipePage = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getIntent().putExtra("nextPage", 3);
+                setResult(RESULT_OK, getIntent());
+                finish();
+            }
+        };
+
+
+        View.OnClickListener pantryPage = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getIntent().putExtra("nextPage", 2);
+                setResult(RESULT_OK, getIntent());
+                finish();
+            }
+        };
+
+        /*already on this page
+        View.OnClickListener shoppingPage = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getIntent().putExtra("nextPage", 1);
+                setResult(RESULT_OK, getIntent());
+                finish();
+            }
+        };*/
+
+        View.OnClickListener homePage = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getIntent().putExtra("nextPage", 0);
+                setResult(RESULT_OK, getIntent());
+                finish();
+            }
+        };
+
+        kitchen.setOnClickListener(pantryPage);
+        main.setOnClickListener(homePage);
+        recipe.setOnClickListener(recipePage);
+        //shopping.setOnClickListener(shoppingPage);
     }
 
     public void createNewItemDialog() {
