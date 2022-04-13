@@ -73,6 +73,55 @@ public class RecipeList  extends AppCompatActivity {
         };
 
         addButton.setOnClickListener(addBtnClick);
+
+        Button kitchen = findViewById(R.id.kitchenOverview);
+        Button main = findViewById(R.id.homeButton);
+        Button shopping = findViewById(R.id.shoppingButton);
+
+        //page codes: 0 is main, 1 is shopping, 2 is pantry, 3 is recipes
+
+        /*already here
+        View.OnClickListener recipePage = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getIntent().putExtra("nextPage", 3);
+                setResult(RESULT_OK, getIntent());
+                finish();
+            }
+        };*/
+
+
+        View.OnClickListener pantryPage = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getIntent().putExtra("nextPage", 2);
+                setResult(RESULT_OK, getIntent());
+                finish();
+            }
+        };
+
+        View.OnClickListener shoppingPage = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getIntent().putExtra("nextPage", 1);
+                setResult(RESULT_OK, getIntent());
+                finish();
+            }
+        };
+
+        View.OnClickListener homePage = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getIntent().putExtra("nextPage", 0);
+                setResult(RESULT_OK, getIntent());
+                finish();
+            }
+        };
+
+        kitchen.setOnClickListener(pantryPage);
+        main.setOnClickListener(homePage);
+        //recipe.setOnClickListener(recipePage);
+        shopping.setOnClickListener(shoppingPage);
     }
 
 

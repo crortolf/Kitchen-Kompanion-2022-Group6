@@ -8,33 +8,144 @@
 
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="32dp"
+        android:fontFamily="@font/playfair_display_bold"
         android:gravity="left"
         android:text="My Recipes"
         android:textColor="#0C600F"
         android:textSize="34sp" />
 
-    <androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="520dp"
         android:layout_marginTop="100dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addrecipebutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:layout_marginLeft="310dp"
+        android:layout_marginTop="32dp"
         android:layout_marginBottom="32dp"
-        android:backgroundTint="#997017"
+        android:backgroundTint="@color/green"
         android:clickable="true"
         android:contentDescription="@string/add_a_new_shopping_list_item"
         android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_input_add" />
+
+    <FrameLayout
+        android:id="@+id/buttonsFrame"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/pageBar"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/brown"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/homeButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/helvetica"
+                android:gravity="bottom|center"
+                android:text="Home"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/shoppingButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/brown"
+                android:fontFamily="@font/helvetica_neue"
+                android:gravity="bottom|center"
+                android:text="Shopping"
+                android:textAllCaps="false"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/kitchenOverview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/brown"
+                android:fontFamily="@font/helvetica_neue"
+                android:gravity="bottom|center"
+                android:text="Overview"
+                android:textAllCaps="false"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/recipesButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/brown"
+                android:fontFamily="@font/helvetica_neue"
+                android:gravity="bottom|center"
+                android:text="Recipes"
+                android:textAllCaps="false"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/iconLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/homeIcon"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/home_icon" />
+
+            <ImageView
+                android:id="@+id/shoppingIcon"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_baseline_add_shopping_cart_24" />
+
+            <ImageView
+                android:id="@+id/overviewIcon"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ingredient_icon" />
+
+            <ImageView
+                android:id="@+id/recipeIcon"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:layout_marginEnd="88dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_action_name" />
+        </LinearLayout>
+    </FrameLayout>
 
 </RelativeLayout>
 

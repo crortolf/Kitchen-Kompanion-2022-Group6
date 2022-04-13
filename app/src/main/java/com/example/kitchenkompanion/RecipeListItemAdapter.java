@@ -2,6 +2,7 @@ package com.example.kitchenkompanion;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +35,6 @@ public class RecipeListItemAdapter extends RecyclerView.Adapter<RecipeListItemAd
     }
 
     private ArrayList<String> item_list_members;
-
     public RecipeListItemAdapter(ArrayList<String> dataset) {
         item_list_members=dataset;
     }
