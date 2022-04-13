@@ -41,12 +41,12 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
-                android:textSize="25dp"
                 android:layout_centerVertical="true"
                 android:layout_weight="33.3"
+                android:backgroundTint="@color/brown"
                 android:onClick="decrement"
-                ></Button>
+                android:text="-"
+                android:textSize="25dp"></Button>
 
             <TextView
                 android:id="@+id/userItemQuantity"
@@ -58,14 +58,14 @@
                 android:layout_weight="33.3"></TextView>
 
             <Button
-                android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:text="+"
-                android:textSize="25dp"
+                android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_weight="33.3"
+                android:backgroundTint="@color/brown"
                 android:onClick="increment"
-                ></Button>
+                android:text="+"
+                android:textSize="25dp"></Button>
 
         </LinearLayout>
 
