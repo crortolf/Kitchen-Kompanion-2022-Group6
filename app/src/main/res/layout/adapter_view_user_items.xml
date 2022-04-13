@@ -45,7 +45,6 @@
                 android:textSize="25dp"
                 android:layout_centerVertical="true"
                 android:layout_weight="33.3"
-                android:onClick="decrement"
                 ></Button>
 
             <TextView
@@ -54,7 +53,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="0"
-                android:textSize="25dp"
+                android:textSize="15dp"
                 android:layout_weight="33.3"></TextView>
 
             <Button
@@ -64,7 +63,6 @@
                 android:textSize="25dp"
                 android:layout_centerVertical="true"
                 android:layout_weight="33.3"
-                android:onClick="increment"
                 ></Button>
 
         </LinearLayout>
