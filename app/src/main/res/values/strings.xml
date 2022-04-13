@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Kitchen Kompanion</string>
     <string name="add_a_new_shopping_list_item">Add a new shopping list item</string>
+    <string-array name="user_name_list">
+        <item>Andrew</item>
+        <item>Ethan</item>
+        <item>Chris</item>
+        <item>Jason</item>
+    </string-array>
 </resources>

@@ -1,26 +1,30 @@
 package com.example.kitchenkompanion;
 
-import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
-public class UserItemList extends AppCompatActivity {
+public class UserItemList extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     ListView listView;
-    // needs to eventually be a list of GroceryItem elements
-    ArrayList<String> items;
-    ArrayAdapter<String> adapter;
+    ArrayList<GroceryItem> items;
+    Spinner spinner;
+//    TextView itemCount;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -30,19 +34,28 @@ public class UserItemList extends AppCompatActivity {
 
         Typeface mt = getResources().getFont(R.font.helvetica_neue);
 
-        listView = findViewById(R.id.listview);
-        items = new ArrayList<>();
-        items.add("Apple");
-        items.add("Banana");
-        items.add("Orange");
-        items.add("Watermelon");
+        spinner = findViewById(R.id.spinner);
+        ArrayAdapter<CharSequence> spinnerAdapter = ArrayAdapter.createFromResource(this, R.array.user_name_list, android.R.layout.simple_spinner_item);
+        spinner.setAdapter(spinnerAdapter);
+        spinner.setOnItemSelectedListener(this);
 
-        adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, items) {
+//        itemCount = (TextView) findViewById()
+
+        listView = findViewById(R.id.listview);
+        items = new ArrayList<GroceryItem>();
+
+        items.add(new GroceryItem("Milk", "Cartons", 0.5f));
+        items.add(new GroceryItem("Apples", "Apples", 4));
+        items.add(new GroceryItem("Flour", "lbs", 3.5f));
+        items.add(new GroceryItem("Ramen", "Cups", 16));
+
+
+        UserItemAdapter adapter = new UserItemAdapter(getApplicationContext(), R.layout.adapter_view_user_items, items) {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
                 View view = super.getView(position, convertView, parent);
                 TextView text = (TextView) view.findViewById(android.R.id.text1);
-                text.setTypeface(mt);
+                //text.setTypeface(mt);
                 return view;
             }
         };
@@ -95,5 +108,16 @@ public class UserItemList extends AppCompatActivity {
         main.setOnClickListener(homePage);
         recipe.setOnClickListener(recipePage);
         shopping.setOnClickListener(shoppingPage);
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        String choice = adapterView.getItemAtPosition(i).toString();
+        Toast.makeText(getApplicationContext(), choice, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
     }
 }
