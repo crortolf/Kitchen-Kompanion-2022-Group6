@@ -32,7 +32,7 @@ public class UserItemList extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_item_list);
 
-        Typeface mt = getResources().getFont(R.font.helvetica);
+        Typeface mt = getResources().getFont(R.font.helvetica_neue);
 
         spinner = findViewById(R.id.spinner);
         ArrayAdapter<CharSequence> spinnerAdapter = ArrayAdapter.createFromResource(this, R.array.user_name_list, android.R.layout.simple_spinner_item);
@@ -55,7 +55,7 @@ public class UserItemList extends AppCompatActivity implements AdapterView.OnIte
             public View getView(int position, View convertView, ViewGroup parent) {
                 View view = super.getView(position, convertView, parent);
                 TextView text = (TextView) view.findViewById(android.R.id.text1);
-                text.setTypeface(mt);
+                //text.setTypeface(mt);
                 return view;
             }
         };
