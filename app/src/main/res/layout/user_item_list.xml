@@ -119,6 +119,12 @@
         android:layout_width="match_parent"
         android:layout_height="100dp">
 
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
@@ -142,6 +148,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@android:drawable/ic_input_add" />
+
+
     </RelativeLayout>
 
     <ListView
