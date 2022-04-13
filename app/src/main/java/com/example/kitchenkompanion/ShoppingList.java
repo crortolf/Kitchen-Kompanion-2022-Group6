@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -124,8 +125,10 @@ public class ShoppingList extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // save button
-                shoppingList.add(new GroceryItem(newItemPopup.getText().toString(), quantityName.getText().toString(), 1f));
+                String item = newItemPopup.getText().toString();
+                shoppingList.add(new GroceryItem(item, quantityName.getText().toString(), 1f));
                 shoppingListAdapter.setGroceryItem(shoppingList);
+                Toast.makeText(getApplicationContext(), "Added " + item, Toast.LENGTH_LONG).show();
                 dialog.dismiss();
             }
         });
