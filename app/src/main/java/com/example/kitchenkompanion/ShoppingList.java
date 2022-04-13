@@ -20,7 +20,7 @@ public class ShoppingList extends AppCompatActivity {
 
     private AlertDialog.Builder dialogBuilder;
     private AlertDialog dialog;
-    private EditText newItemPopup;
+    private EditText newItemPopup, quantityName, quantityAmount;
     private Button popupCancel, popupSave;
 
     private List<GroceryItem> shoppingList;
@@ -63,6 +63,8 @@ public class ShoppingList extends AppCompatActivity {
         dialogBuilder = new AlertDialog.Builder(this);
         final View shoppingItemPopupView = getLayoutInflater().inflate(R.layout.shoppingitempopup, null);
         newItemPopup = (EditText) shoppingItemPopupView.findViewById(R.id.newItemPopup);
+        quantityName = (EditText) shoppingItemPopupView.findViewById(R.id.quantityName);
+        quantityAmount = (EditText) shoppingItemPopupView.findViewById(R.id.quantityAmount);
 
         popupSave = (Button) shoppingItemPopupView.findViewById(R.id.saveButton);
         popupCancel = (Button) shoppingItemPopupView.findViewById(R.id.cancelButton);
@@ -75,7 +77,7 @@ public class ShoppingList extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // save button
-                shoppingList.add(new GroceryItem("Filler", "Units", 1f));
+                shoppingList.add(new GroceryItem(newItemPopup.getText().toString(), quantityName.getText().toString(), 1f));
                 shoppingListAdapter.setGroceryItem(shoppingList);
                 dialog.dismiss();
             }

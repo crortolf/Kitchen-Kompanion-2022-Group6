@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< Updated upstream
         <entry key="..\:/Users/Ethan/Desktop/Spring 2022/cmsc434/Kitchen-Kompanion-2022-Group6/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1825" />
         <entry key="..\:/Users/Ethan/Desktop/Spring 2022/cmsc434/Kitchen-Kompanion-2022-Group6/app/src/main/res/drawable/gradient_background.xml" value="0.1825" />
         <entry key="..\:/Users/Ethan/Desktop/Spring 2022/cmsc434/Kitchen-Kompanion-2022-Group6/app/src/main/res/drawable/ic_baseline_add_shopping_cart_24.xml" value="0.1825" />
@@ -27,6 +28,35 @@
         <entry key="..\:/Users/slam2/OneDrive/Documents/College/Senior Year 2nd Sem/CMSC434/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/recycle_list.xml" value="0.32760416666666664" />
         <entry key="..\:/Users/slam2/OneDrive/Documents/College/Senior Year 2nd Sem/CMSC434/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/shopping_list_layout.xml" value="0.32760416666666664" />
         <entry key="..\:/Users/slam2/OneDrive/Documents/College/Senior Year 2nd Sem/CMSC434/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/shoppingitempopup.xml" value="0.35688405797101447" />
+=======
+        <entry key="..\:/Users/crort/Kitchen-Kompanion-2022-Group6/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.182" />
+        <entry key="..\:/Users/crort/Kitchen-Kompanion-2022-Group6/app/src/main/res/drawable/gradient_background.xml" value="0.182" />
+        <entry key="..\:/Users/crort/Kitchen-Kompanion-2022-Group6/app/src/main/res/drawable/ic_baseline_add_shopping_cart_24.xml" value="0.144" />
+        <entry key="..\:/Users/crort/Kitchen-Kompanion-2022-Group6/app/src/main/res/drawable/ic_launcher_background.xml" value="0.144" />
+        <entry key="..\:/Users/crort/Kitchen-Kompanion-2022-Group6/app/src/main/res/drawable/main_icon.xml" value="0.182" />
+        <entry key="..\:/Users/crort/Kitchen-Kompanion-2022-Group6/app/src/main/res/drawable/rounded_button.xml" value="0.182" />
+        <entry key="..\:/Users/crort/Kitchen-Kompanion-2022-Group6/app/src/main/res/font/default_fonts.xml" value="0.337037037037037" />
+        <entry key="..\:/Users/crort/Kitchen-Kompanion-2022-Group6/app/src/main/res/font/playfair.xml" value="0.337037037037037" />
+        <entry key="..\:/Users/crort/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/activity_add_recipe.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/crort/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/crort/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/activity_shopping_list.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/crort/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/adapter_view_user_items.xml" value="0.35733695652173914" />
+        <entry key="..\:/Users/crort/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/recipe_list.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/crort/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/recipe_list_item_recycler.xml" value="0.35733695652173914" />
+        <entry key="..\:/Users/crort/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/recycle_list.xml" value="0.33" />
+        <entry key="..\:/Users/crort/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/shopping_list_layout.xml" value="0.33" />
+        <entry key="..\:/Users/crort/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/shoppingitempopup.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/crort/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/user_item_list.xml" value="0.33" />
+        <entry key="..\:/Users/crort/Kitchen-Kompanion-2022-Group6/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.192" />
+        <entry key="..\:/Users/crort/Kitchen-Kompanion-2022-Group6/app/src/main/res/mipmap-anydpi-v26/main_icon.xml" value="0.182" />
+        <entry key="..\:/Users/crort/Kitchen-Kompanion-2022-Group6/app/src/main/res/mipmap-anydpi-v26/main_icon_round.xml" value="0.2985" />
+        <entry key="..\:/Users/crort/Kitchen-Kompanion-2022-Group6/app/src/main/res/mipmap-mdpi/ic_launcher.xml" value="0.192" />
+        <entry key="..\:/Users/crort/Kitchen-Kompanion-2022-Group6/app/src/main/res/mipmap-mdpi/main_icon_foregorund.xml" value="0.192" />
+        <entry key="..\:/Users/slam2/OneDrive/Documents/College/Senior Year 2nd Sem/CMSC434/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/activity_main.xml" value="0.15501519756838905" />
+        <entry key="..\:/Users/slam2/OneDrive/Documents/College/Senior Year 2nd Sem/CMSC434/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/activity_shopping_list.xml" value="0.21693840579710144" />
+        <entry key="..\:/Users/slam2/OneDrive/Documents/College/Senior Year 2nd Sem/CMSC434/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/shopping_list_layout.xml" value="0.22418478260869565" />
+        <entry key="..\:/Users/slam2/OneDrive/Documents/College/Senior Year 2nd Sem/CMSC434/Kitchen-Kompanion-2022-Group6/app/src/main/res/layout/shoppingitempopup.xml" value="0.22418478260869565" />
+>>>>>>> Stashed changes
       </map>
     </option>
   </component>
