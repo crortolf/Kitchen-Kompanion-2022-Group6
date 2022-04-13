@@ -22,7 +22,7 @@ public class UserItemAdapter extends ArrayAdapter<GroceryItem> {
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
-        String name = getItem(position).name;
+        String name = getItem (position).name;
         String units = getItem(position).units;
         float amount = getItem(position).amount;
         float minimumAmount = getItem(position).minimumAmount;
