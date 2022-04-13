@@ -41,8 +41,8 @@ public class UserItemAdapter extends ArrayAdapter<GroceryItem> {
         TextView tvExpDate = (TextView) convertView.findViewById(R.id.userItemExpDate);
 
         tvName.setText(name);
-        tvQuantity.setText(String.valueOf(amount));
-        tvExpDate.setText("Expiration Date");
+        tvQuantity.setText(String.valueOf(amount) + " " + units);
+        tvExpDate.setText("Expiration Date: XX/XX/XXXX");
 
         tvName.setTypeface(mt);
         tvQuantity.setTypeface(mt);
