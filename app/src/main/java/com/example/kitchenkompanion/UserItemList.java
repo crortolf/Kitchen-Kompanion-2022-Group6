@@ -33,10 +33,13 @@ public class UserItemList extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_item_list);
 
+        String[] users = getIntent().getStringArrayExtra("users");
+
         spinner = findViewById(R.id.spinner);
-        ArrayAdapter<CharSequence> spinnerAdapter = ArrayAdapter.createFromResource(this, R.array.user_name_list, android.R.layout.simple_spinner_item);
+        ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, users);
         spinner.setAdapter(spinnerAdapter);
         spinner.setOnItemSelectedListener(this);
+        spinner.setSelection(getIntent().getIntExtra("currentUser", 0));
 
 //        itemCount = (TextView) findViewById()
 
@@ -63,6 +66,7 @@ public class UserItemList extends AppCompatActivity implements AdapterView.OnIte
             @Override
             public void onClick(View view) {
                 getIntent().putExtra("nextPage", 3);
+                getIntent().putExtra("currentUser", spinner.getSelectedItemPosition());
                 setResult(RESULT_OK, getIntent());
                 finish();
             }
@@ -81,6 +85,7 @@ public class UserItemList extends AppCompatActivity implements AdapterView.OnIte
             @Override
             public void onClick(View view) {
                 getIntent().putExtra("nextPage", 1);
+                getIntent().putExtra("currentUser", spinner.getSelectedItemPosition());
                 setResult(RESULT_OK, getIntent());
                 finish();
             }
@@ -90,6 +95,7 @@ public class UserItemList extends AppCompatActivity implements AdapterView.OnIte
             @Override
             public void onClick(View view) {
                 getIntent().putExtra("nextPage", 0);
+                getIntent().putExtra("currentUser", spinner.getSelectedItemPosition());
                 setResult(RESULT_OK, getIntent());
                 finish();
             }
