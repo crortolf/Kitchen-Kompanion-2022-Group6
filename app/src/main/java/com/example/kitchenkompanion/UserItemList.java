@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
 import org.w3c.dom.Text;
 
@@ -32,12 +33,13 @@ public class UserItemList extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_item_list);
 
-        Typeface mt = getResources().getFont(R.font.helvetica_neue);
+        String[] users = getIntent().getStringArrayExtra("users");
 
         spinner = findViewById(R.id.spinner);
-        ArrayAdapter<CharSequence> spinnerAdapter = ArrayAdapter.createFromResource(this, R.array.user_name_list, android.R.layout.simple_spinner_item);
+        ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, users);
         spinner.setAdapter(spinnerAdapter);
         spinner.setOnItemSelectedListener(this);
+        spinner.setSelection(getIntent().getIntExtra("currentUser", 0));
 
 //        itemCount = (TextView) findViewById()
 
@@ -50,15 +52,7 @@ public class UserItemList extends AppCompatActivity implements AdapterView.OnIte
         items.add(new GroceryItem("Ramen", "Cups", 16));
 
 
-        UserItemAdapter adapter = new UserItemAdapter(getApplicationContext(), R.layout.adapter_view_user_items, items) {
-            @Override
-            public View getView(int position, View convertView, ViewGroup parent) {
-                View view = super.getView(position, convertView, parent);
-                TextView text = (TextView) view.findViewById(android.R.id.text1);
-                //text.setTypeface(mt);
-                return view;
-            }
-        };
+        UserItemAdapter adapter = new UserItemAdapter(getApplicationContext(), R.layout.adapter_view_user_items, items);
         listView.setAdapter(adapter);
 
         Button recipe = findViewById(R.id.recipesButton);
@@ -72,6 +66,7 @@ public class UserItemList extends AppCompatActivity implements AdapterView.OnIte
             @Override
             public void onClick(View view) {
                 getIntent().putExtra("nextPage", 3);
+                getIntent().putExtra("currentUser", spinner.getSelectedItemPosition());
                 setResult(RESULT_OK, getIntent());
                 finish();
             }
@@ -90,6 +85,7 @@ public class UserItemList extends AppCompatActivity implements AdapterView.OnIte
             @Override
             public void onClick(View view) {
                 getIntent().putExtra("nextPage", 1);
+                getIntent().putExtra("currentUser", spinner.getSelectedItemPosition());
                 setResult(RESULT_OK, getIntent());
                 finish();
             }
@@ -99,6 +95,7 @@ public class UserItemList extends AppCompatActivity implements AdapterView.OnIte
             @Override
             public void onClick(View view) {
                 getIntent().putExtra("nextPage", 0);
+                getIntent().putExtra("currentUser", spinner.getSelectedItemPosition());
                 setResult(RESULT_OK, getIntent());
                 finish();
             }
