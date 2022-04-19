@@ -26,6 +26,7 @@ public class UserItemAdapter extends ArrayAdapter<GroceryItem> {
         String units = getItem(position).units;
         float amount = getItem(position).amount;
         float minimumAmount = getItem(position).minimumAmount;
+        String expirationDate = getItem(position).expirationDate;
 
         GroceryItem item = new GroceryItem(name, units, amount, minimumAmount);
         LayoutInflater inflater = LayoutInflater.from(mContext);
@@ -37,7 +38,7 @@ public class UserItemAdapter extends ArrayAdapter<GroceryItem> {
 
         tvName.setText(name);
         tvQuantity.setText(String.valueOf(amount) + " " + units);
-        tvExpDate.setText("Expiration Date: XX/XX/XXXX");
+        tvExpDate.setText("Expiration Date: " + expirationDate);
 
         return convertView;
     }

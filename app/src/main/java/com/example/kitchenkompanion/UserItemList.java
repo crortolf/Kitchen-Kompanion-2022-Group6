@@ -44,11 +44,18 @@ public class UserItemList extends AppCompatActivity implements AdapterView.OnIte
         listView = findViewById(R.id.listview);
         items = new ArrayList<GroceryItem>();
 
-        items.add(new GroceryItem("Milk", "Cartons", 0.5f));
-        items.add(new GroceryItem("Apples", "Apples", 4));
-        items.add(new GroceryItem("Flour", "lbs", 3.5f));
-        items.add(new GroceryItem("Ramen", "Cups", 16));
+        GroceryItem milk = new GroceryItem("Milk", "Cartons", 0.5f);
+        GroceryItem apples = new GroceryItem("Apples", "Apples", 4);
+        GroceryItem flour = new GroceryItem("Flour", "lbs", 3.5f);
+        GroceryItem ramen = new GroceryItem("Ramen", "Cups", 16);
 
+        milk.setExpirationDate("5/18/2022");
+        apples.setExpirationDate("4/20/2022");
+
+        items.add(milk);
+        items.add(apples);
+        items.add(flour);
+        items.add(ramen);
 
         UserItemAdapter adapter = new UserItemAdapter(getApplicationContext(), R.layout.adapter_view_user_items, items) {
             @Override

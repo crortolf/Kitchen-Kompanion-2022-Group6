@@ -4,6 +4,7 @@ public class GroceryItem {
     public String name, units;
     private boolean status;
     public float amount, minimumAmount;
+    public String expirationDate;
 
     public GroceryItem(String name, String units, float amount) {
         this.name = name;
@@ -11,12 +12,15 @@ public class GroceryItem {
         this.amount = amount;
         this.status = false;
         minimumAmount = 0;
+        expirationDate = "N/A";
     }
 
     public GroceryItem(String name, String units, float amount, float minimumAmount) {
         this(name, units, amount);
         this.minimumAmount = minimumAmount;
+        this.expirationDate = "N/A";
     }
+
 
     public String toString() {
         String amountS, minimumAmountS;
@@ -29,6 +33,10 @@ public class GroceryItem {
         String amountS;
         amountS = (amount % 1.0 == 0.0) ? String.valueOf((int) amount) : String.valueOf(amount);
         return amountS + units;
+    }
+
+    public void setExpirationDate(String expdate) {
+        this.expirationDate = expdate;
     }
 
     public String getName() {
